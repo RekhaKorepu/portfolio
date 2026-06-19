@@ -3,6 +3,7 @@ import { ThemeProvider } from './context/ThemeContext'
 import { Navbar } from './components/Navbar'
 import { HeroSection } from './components/HeroSection'
 import { Education } from './components/Education'
+import { Experience } from './components/Experience'
 import './App.css'
 
 function ScrollProgress() {
@@ -37,10 +38,9 @@ export default function App() {
 
       <main>
         <HeroSection />
+        <Experience />
         <Education />
 
-        <section id="about" style={{ minHeight: '60px' }} />
-        <section id="experience" style={{ minHeight: '60px' }} />
         <section id="skills" style={{ minHeight: '60px' }} />
         <section id="projects" style={{ minHeight: '60px' }} />
         <section id="contact" style={{ minHeight: '60px' }} />
