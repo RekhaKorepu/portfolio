@@ -4,6 +4,7 @@ import { Navbar } from './components/Navbar'
 import { HeroSection } from './components/HeroSection'
 import { Education } from './components/Education'
 import { Experience } from './components/Experience'
+import { Skills } from './components/Skills'
 import './App.css'
 
 function ScrollProgress() {
@@ -39,9 +40,9 @@ export default function App() {
       <main>
         <HeroSection />
         <Experience />
+        <Skills />
         <Education />
 
-        <section id="skills" style={{ minHeight: '60px' }} />
         <section id="projects" style={{ minHeight: '60px' }} />
         <section id="contact" style={{ minHeight: '60px' }} />
       </main>
