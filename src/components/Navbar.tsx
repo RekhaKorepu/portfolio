@@ -75,8 +75,9 @@ export function Navbar() {
 
             <a
               id="nav-talk-btn"
-              href="mailto:rekhaakorepu@gmail.com"
+              href="#contact"
               className="btn-talk"
+              onClick={e => { e.preventDefault(); go('#contact') }}
             >
               Let&apos;s talk
             </a>
