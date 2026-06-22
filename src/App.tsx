@@ -6,6 +6,7 @@ import { Education } from './components/Education'
 import { Experience } from './components/Experience'
 import { Skills } from './components/Skills'
 import { Projects } from './components/Projects'
+import { Certifications } from './components/Certifications'
 import './App.css'
 
 function ScrollProgress() {
@@ -44,8 +45,7 @@ export default function App() {
         <Skills />
         <Projects />
         <Education />
-
-        <section id="contact" style={{ minHeight: '60px' }} />
+        <Certifications />
       </main>
     </ThemeProvider>
   )
