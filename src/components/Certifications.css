@@ -1,0 +1,200 @@
+/* Certifications Section styling */
+.cert-section {
+  padding: 8rem 0;
+  position: relative;
+  scroll-margin-top: 5rem;
+  background-color: var(--bg);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cert-section.cert-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cert-header {
+  text-align: center;
+  margin-bottom: 4.5rem;
+}
+
+.cert-eyebrow {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--primary-muted);
+  margin-bottom: 0.5rem;
+}
+
+.cert-title {
+  font-family: var(--font-sans);
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.cert-title-line {
+  width: 50px;
+  height: 2px;
+  background: var(--aurora);
+  margin: 1rem auto 0;
+  border-radius: 9999px;
+}
+
+/* Grid Layout */
+.cert-grid {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: 1fr;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Card Structure */
+.cert-card {
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid var(--glass-border);
+  border-left: 4.5px solid var(--issuer-color);
+  transition: transform var(--transition-slow),
+    box-shadow var(--transition-slow),
+    border-color var(--transition);
+}
+
+.cert-card:hover {
+  transform: translateY(-6px);
+  border-color: color-mix(in srgb, var(--issuer-color) 40%, var(--glass-border));
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15),
+    0 0 24px color-mix(in srgb, var(--issuer-color) 15%, transparent);
+}
+
+[data-theme="dark"] .cert-card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4),
+    0 0 24px color-mix(in srgb, var(--issuer-color) 20%, transparent);
+}
+
+/* Card Body Content */
+.cert-content {
+  padding: 2.25rem 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-meta-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.cert-card-title {
+  font-family: var(--font-sans);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.35;
+  transition: color var(--transition);
+}
+
+.cert-card:hover .cert-card-title {
+  color: var(--issuer-color);
+}
+
+.cert-link-btn {
+  color: var(--text-muted);
+  transition: color var(--transition), transform var(--transition);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.cert-link-btn:hover {
+  color: var(--issuer-color);
+  transform: translate(2px, -2px);
+}
+
+/* Issuer details & dates */
+.cert-issuer-box {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.cert-issuer-badge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  background-color: color-mix(in srgb, var(--issuer-color) 10%, transparent);
+  color: var(--issuer-color);
+  border: 1px solid color-mix(in srgb, var(--issuer-color) 15%, transparent);
+}
+
+.cert-issuer-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-issuer-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.cert-issuer-date {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.125rem;
+}
+
+.cert-desc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+}
+
+/* Skill Tags Badges */
+.cert-tags {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  border-top: 1px solid var(--glass-border);
+}
+
+.cert-tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--primary-muted);
+  padding: 0.2rem 0.5rem;
+  background: var(--primary-light);
+  border: 1px solid var(--primary-light12);
+  border-radius: 4px;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.cert-card:hover .cert-tag {
+  border-color: color-mix(in srgb, var(--issuer-color) 15%, var(--primary-light12));
+}

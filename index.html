@@ -4,7 +4,34 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
+
+    <!-- SEO -->
+    <title>Rekha Korepu | Software Engineer</title>
+    <meta name="description" content="Portfolio of Rekha Korepu — Full Stack Software Engineer specializing in React, Node.js, TypeScript, and scalable backend systems." />
+    <meta name="keywords" content="Rekha Korepu, Software Engineer, Full Stack Developer, React, Node.js, TypeScript, Portfolio" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Rekha Korepu" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Rekha Korepu | Software Engineer" />
+    <meta property="og:description" content="Portfolio of Rekha Korepu — Full Stack Software Engineer." />
+    <meta property="og:url" content="https://rekhakorepu.dev" />
+
+    <!-- Google Fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Anti-FOUC: set theme before first paint -->
+    <script>
+      try {
+        var t = localStorage.getItem('portfolio-theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch(e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
